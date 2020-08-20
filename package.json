@@ -1,0 +1,33 @@
+{
+  "name": "groda-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "build:watch": "webpack --config webpack.prod.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@rjsf/core": "^2.2.0",
+    "@rjsf/material-ui": "^2.2.0",
+    "@staffbase/widget-sdk": "^1.1.1",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "copy-webpack-plugin": "^6.0.3",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.8"
+  }
+}
