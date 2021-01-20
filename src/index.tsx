@@ -42,7 +42,7 @@ const factory: BlockFactory = Base => {
 };
 
 const blockDefinition: BlockDefinition = {
-    name: "groda-test",
+    name: "example-widget",
     factory: factory,
     attributes: [],
     blockLevel: 'block',
