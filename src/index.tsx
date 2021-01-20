@@ -24,9 +24,11 @@ const factory: BlockFactory = Base => {
         }
 
         public renderBlock(container: HTMLElement): void {
-            const div = document.createElement('div')
-            div.innerText="test";
-            container.appendChild(div)
+            var div = document.createElement('div');
+            div.setAttribute('class', 'content');
+            div.innerText = 'User view';
+            console.log('renderblock', div);
+            container.appendChild(div);
         }
 
         unmountBlock(container: HTMLElement): void {
@@ -34,9 +36,10 @@ const factory: BlockFactory = Base => {
         }
 
         public renderBlockInEditor(container: HTMLElement): void {
-            const div = document.createElement('div')
-            div.innerText="editor";
-            container.appendChild(div)
+            var div = document.createElement('div');
+            div.setAttribute('class', 'content');
+            div.innerText = 'Editor view';
+            container.appendChild(div);
         }
     };
 };
