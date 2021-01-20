@@ -3,16 +3,18 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "ES6",
-    "jsx": "react",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["dom", "es7", "es2018.promise"],
+    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
+     "moduleResolution": "node",
     "resolveJsonModule": true,
     "baseUrl": "src",
     "paths": {
       "widget-sdk": ["../node_modules/@staffbase/widget-sdk"]
-    },
+    }
   },
-  "include": ["src/*"],
+  "include": ["src/*"]
 }
