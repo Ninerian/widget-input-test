@@ -13,7 +13,7 @@ const extensions = [
 const core = {
     input: 'src/index.tsx',
     output: {
-        file: 'dist/bundle.js',
+        file: 'dist/groda-test.widget.js',
         format: 'iife',
     },
     plugins: [

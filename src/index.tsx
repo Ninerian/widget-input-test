@@ -12,6 +12,9 @@
  */
 
 import { BlockFactory, BlockDefinition, ExternalBlockDefinition } from "widget-sdk";
+import { GrodaTestProps } from "./groda-test";
+import { configurationSchema } from "./configuration-schema";
+import { author, version } from '../package.json'
 
 const factory: BlockFactory = Base => {
     /**
@@ -23,12 +26,21 @@ const factory: BlockFactory = Base => {
             super();
         }
 
+        get props(): GrodaTestProps {
+            const defaults = super.props
+            return {
+                ...defaults,
+                message: this.getAttribute("message") || "",
+                list: this.getAttribute("list") || "",
+                select: this.getAttribute("select") || "",
+            };
+        }
+
         public renderBlock(container: HTMLElement): void {
-            var div = document.createElement('div');
-            div.setAttribute('class', 'content');
-            div.innerText = 'User view';
-            console.log('renderblock', div);
-            container.appendChild(div);
+            const div = document.createElement('div')
+            const props = this.props;
+            div.innerText="Widget Language " + props.contentLanguage;
+            container.appendChild(div)
         }
 
         unmountBlock(container: HTMLElement): void {
@@ -36,26 +48,35 @@ const factory: BlockFactory = Base => {
         }
 
         public renderBlockInEditor(container: HTMLElement): void {
-            var div = document.createElement('div');
-            div.setAttribute('class', 'content');
-            div.innerText = 'Editor view';
-            container.appendChild(div);
+            const div = document.createElement('div')
+            const props = this.props;
+            div.innerText=`Widget Language ` + props.contentLanguage;
+            container.appendChild(div)
+        }
+
+
+        public static get observedAttributes(): string[] {
+            return ["content-language", "widget-title", "message", "list", "select"];
+        }
+
+        public attributeChangedCallback(...args: [string, string | undefined, string | undefined]): void {
+            super.attributeChangedCallback.apply(this.constructor, args);
         }
     };
 };
 
 const blockDefinition: BlockDefinition = {
-    name: "example-widget",
+    name: "groda-test",
     factory: factory,
-    attributes: [],
+    attributes: ['message'],
     blockLevel: 'block',
-    configurationSchema: {},
+    configurationSchema: configurationSchema,
 };
 
 const externalBlockDefinition: ExternalBlockDefinition = {
     blockDefinition,
-    author: "xx",
-    version: "1.9.9"
+    author,
+    version
 };
 
 window.defineBlock(externalBlockDefinition);

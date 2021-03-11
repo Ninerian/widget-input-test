@@ -22,39 +22,6 @@ export const configurationSchema: JSONSchema7 = {
     message: {
       type: "string",
       title: "message",
-    },
-    list: {
-      type: "array",
-      items: {
-        type: "string"
-      }
-
-    },
-    select: {
-      "type": "number",
-  "anyOf": [
-    {
-      "type": "number",
-      "title": "one",
-      "enum": [
-        1
-      ]
-    },
-    {
-      "type": "number",
-      "title": "two",
-      "enum": [
-        2
-      ]
-    },
-    {
-      "type": "number",
-      "title": "three",
-      "enum": [
-        3
-      ]
     }
-  ] }
-
   },
 };
