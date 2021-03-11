@@ -32,7 +32,7 @@
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "11.2.0",
     "@rollup/plugin-typescript": "8.1.0",
-    "@staffbase/widget-sdk": "https://69fb5c13a8dcae8baf48c69ade7c14ed59739f76@github.com/Staffbase/widget-sdk.git#NFS-872-default-properties",
+    "@staffbase/widget-sdk": "3.2.0",
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
     "rollup": "2.37.1",

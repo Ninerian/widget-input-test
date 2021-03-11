@@ -1087,9 +1087,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@staffbase/widget-sdk@https://69fb5c13a8dcae8baf48c69ade7c14ed59739f76@github.com/Staffbase/widget-sdk.git#NFS-872-default-properties":
-  version "3.1.0"
-  resolved "https://69fb5c13a8dcae8baf48c69ade7c14ed59739f76@github.com/Staffbase/widget-sdk.git#a75a52330482d4640dd218b896bd7c8f3ad6f421"
+"@staffbase/widget-sdk@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@staffbase/widget-sdk/-/widget-sdk-3.2.0.tgz#180475ca9b1ddb3d7fa8343ff48630f8a989999b"
+  integrity sha512-raqQAMva0XMOREjjVCxlD+d9Oymm/DzOi79qG+5e9iQWFMigoaA2Xv0+stZ87blBWRc0hRZYRcQj/rj2d+eijQ==
   dependencies:
     "@types/json-schema" "^7.0.5"
 
