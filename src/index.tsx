@@ -27,9 +27,8 @@ const factory: BlockFactory = Base => {
         }
 
         get props(): GrodaTestProps {
-            const defaults = super.props
             return {
-                ...defaults,
+                contentLanguage: this.contentLanguage,
                 message: this.getAttribute("message") || "",
                 list: this.getAttribute("list") || "",
                 select: this.getAttribute("select") || "",
@@ -68,7 +67,7 @@ const factory: BlockFactory = Base => {
 const blockDefinition: BlockDefinition = {
     name: "groda-test",
     factory: factory,
-    attributes: ['message'],
+    attributes: ['content-language', 'message'],
     blockLevel: 'block',
     configurationSchema: configurationSchema,
 };
